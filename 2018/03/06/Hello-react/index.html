@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://beginner-g.github.io/2018/03/06/Hello-react/index.html">
 <meta property="og:site_name" content="Beginner">
 <meta property="og:description" content="在 create-react-app 环境下，我们来写一个 react 的 Hello World 。 运行项目到 create-react-app 帮我们生成的项目中，运行1npm start 就可以启动这个项目了。 一个 Hello World一个最简单的 React 项目，包含下面几个文件 src/App.js12345678910111213import React, &amp;#123; Com">
-<meta property="og:updated_time" content="2018-03-09T08:07:27.000Z">
+<meta property="og:updated_time" content="2018-03-09T08:57:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="创建 Hello react 项目">
 <meta name="twitter:description" content="在 create-react-app 环境下，我们来写一个 react 的 Hello World 。 运行项目到 create-react-app 帮我们生成的项目中，运行1npm start 就可以启动这个项目了。 一个 Hello World一个最简单的 React 项目，包含下面几个文件 src/App.js12345678910111213import React, &amp;#123; Com">
@@ -118,6 +118,13 @@
     <div class="post-title-bar">
       <ul>
           
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/React/">React</a>
+                  
+              </li>
+          
         <li>
           <i class="fa fa-calendar"></i>  2018-03-06
         </li>
@@ -140,7 +147,7 @@
 <p>就可以启动这个项目了。</p>
 <h3 id="一个-Hello-World"><a href="#一个-Hello-World" class="headerlink" title="一个 Hello World"></a>一个 Hello World</h3><p>一个最简单的 React 项目，包含下面几个文件</p>
 <p>src/App.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        Hello World</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default App</span></span><br></pre></td></tr></table></figure></p>
-<p>src/index.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;App /&gt;, document.getElementById('root'))</span><br></pre></td></tr></table></figure></p>
+<p>src/index.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></span><br><span class="line"></span><br><span class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span>, document.getElementById('root'))</span></span><br></pre></td></tr></table></figure></p>
 <p>public/index.html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"root"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="介绍一下上面三个文件的作用"><a href="#介绍一下上面三个文件的作用" class="headerlink" title="介绍一下上面三个文件的作用"></a>介绍一下上面三个文件的作用</h3><p>index.html 文件中基本就是空的，关键就是保留一个 div ，目的是用来挂载 React 组件。</p>
 <p>App.js 文件是一个 React 组件 （ component ）。未来会成为整个程序的主体。</p>
@@ -148,7 +155,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年03月09日 16:07</p>
+        <p>最后更新： 2018年03月09日 16:57</p>
         <p>原始链接： <a class="post-url" href="/2018/03/06/Hello-react/" title="创建 Hello react 项目">http://beginner-g.github.io/2018/03/06/Hello-react/</a></p>
         <footer>
             <a href="http://beginner-g.github.io">
@@ -347,7 +354,7 @@
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Others/">Others</a><a class="category-link" href="/categories/Vue/">Vue</a>
+            <a class="category-link" href="/categories/Others/">Others</a><a class="category-link" href="/categories/React/">React</a><a class="category-link" href="/categories/Vue/">Vue</a>
         </div>
         <div id="sidebar-menu-box-tags">
             <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JSX/" style="font-size: 10px;">JSX</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/component/" style="font-size: 10px;">component</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/组件拆分/" style="font-size: 10px;">组件拆分</a>
