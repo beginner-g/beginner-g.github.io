@@ -92,10 +92,7 @@
                         <a title="Github" target="_blank" href="//github.com/beginner-g">
                             <i class="fa fa-github fa-2x"></i></a>
                     
-                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
-                            <i class="fa fa-weibo fa-2x"></i></a>
-                    
-                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                        <a title="Twitter" target="_blank" href="//twitter.com/guoshuai0526">
                             <i class="fa fa-twitter fa-2x"></i></a>
                     
                 </div>
@@ -140,7 +137,7 @@
             <p>
                 我们来讨论下Es5和Es6到底有什么区别呢？系统库的引用
 ES5中的引用需要先使用require导入React包，成为对象，再去进行真正引用
-123456//ES5var React = req...
+123456//ES5var React = require("react");var &#123;    Component,    PropType...
             </p>
         </div>
       
@@ -204,7 +201,7 @@ ES5中的引用需要先使用require导入React包，成为对象，再去进�
         </div>
         <div class="article-feed">
             <p>
-                安装Vue脚手架时遇到的管理员权限问题➜  vue npm i -g vue-cli123456789101112131415161718npm WARN deprecated coffee-s...
+                安装Vue脚手架时遇到的管理员权限问题➜  vue npm i -g vue-cli123456789101112131415161718npm WARN deprecated coffee-script@1.12.7: CoffeeScript on NPM has moved to &qu...
             </p>
         </div>
       
@@ -263,7 +260,9 @@ ES5中的引用需要先使用require导入React包，成为对象，再去进�
             <p>
                 git 命令(上传)把网上仓库上传到本地，并对多个人写的内容的更新与自己写的同步
 git clone 克隆网上仓库到本地
-git diff 未添加到git缓存区之前详细修改查看做了哪些修改。按 ...
+git diff 未添加到git缓存区之前详细修改查看做了哪些修改。按 q 退出。
+git add &lt;文件名&gt; 把项目的修改添加到缓存区
+git commit ...
             </p>
         </div>
       
@@ -326,7 +325,8 @@ git diff 未添加到git缓存区之前详细修改查看做了哪些修改。�
         <div class="article-feed">
             <p>
                 官网在 https://github.com/facebookincubator/create-react-app 。
-简称 cra 。cra 的主要作者就是目前 react 项目的老大 Dan...
+简称 cra 。cra 的主要作者就是目前 react 项目的老大 Dan ，以及 facebook 公司的其他一些员工。
+cra 是一个开发 React 项目的环境，无需配...
             </p>
         </div>
       
@@ -386,7 +386,9 @@ git diff 未添加到git缓存区之前详细修改查看做了哪些修改。�
         <div class="article-feed">
             <p>
                 在 create-react-app 环境下，我们来写一个 react 的 Hello World 。
-运行项目到 create-react-app 帮我们生成的项目中，运行1npm start...
+运行项目到 create-react-app 帮我们生成的项目中，运行1npm start
+就可以启动这个项目了。
+一个 Hello World一个最简单的 React 项目，包含下面几个文...
             </p>
         </div>
       
@@ -449,7 +451,7 @@ git diff 未添加到git缓存区之前详细修改查看做了哪些修改。�
         <div class="article-feed">
             <p>
                 React.Component是什么？组件让你可以将用户界面分成独立的，可重复使用的部分，并且可以独立思考每个部分。React.Component由…提供React。
-动手来写一个 React ...
+动手来写一个 React 组件创建 src/App.js 文件（ React 组件文件一般都是首字母大写，例如这里的 App....
             </p>
         </div>
       
@@ -508,7 +510,10 @@ git diff 未添加到git缓存区之前详细修改查看做了哪些修改。�
             <p>
                 jsx 是 React 项目组自己发明的一种文件格式。作用就是让我们可以在一个 js 文件中，使用类似 html 这样语法来写界面。
 下面我们把 Hello World 程序写复杂一些。
-JSX...
+JSX 跟普通 html 的区别
+
+不能用 class ，而要用 className
+jsx 中也可以去插...
             </p>
         </div>
       
@@ -579,7 +584,9 @@ JSX...
 组件不一定非要复用
 一个组件最好不要超过一百行代码
 组件可以无限拆分
-组件要放到...
+组件要放到 src/components/ 文件夹内
+
+
             </p>
         </div>
       
