@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Git 和 Github | Beginner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Guoshuai's Blog" />
+  
+  <meta name="description" content="git 命令(上传)把网上仓库上传到本地，并对多个人写的内容的更新与自己写的同步 git clone 克隆网上仓库到本地 git diff 未添加到git缓存区之前详细修改查看做了哪些修改。按 q 退出。 git add &amp;lt;文件名&amp;gt; 把项目的修改添加到缓存区 git commit -m ‘名字’ 更新版本 git push 上传网上 git pull 多个系统同时更新，先把网上修改的放">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git 和 Github">
+<meta property="og:url" content="http://beginner-g.github.io/2018/03/06/Git和Github/index.html">
+<meta property="og:site_name" content="Beginner">
+<meta property="og:description" content="git 命令(上传)把网上仓库上传到本地，并对多个人写的内容的更新与自己写的同步 git clone 克隆网上仓库到本地 git diff 未添加到git缓存区之前详细修改查看做了哪些修改。按 q 退出。 git add &amp;lt;文件名&amp;gt; 把项目的修改添加到缓存区 git commit -m ‘名字’ 更新版本 git push 上传网上 git pull 多个系统同时更新，先把网上修改的放">
+<meta property="og:updated_time" content="2018-03-09T08:07:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git 和 Github">
+<meta name="twitter:description" content="git 命令(上传)把网上仓库上传到本地，并对多个人写的内容的更新与自己写的同步 git clone 克隆网上仓库到本地 git diff 未添加到git缓存区之前详细修改查看做了哪些修改。按 q 退出。 git add &amp;lt;文件名&amp;gt; 把项目的修改添加到缓存区 git commit -m ‘名字’ 更新版本 git push 上传网上 git pull 多个系统同时更新，先把网上修改的放">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Guoshuai&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Guoshuai&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 WEB 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home"  href="/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/beginner-g">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-Git和Github" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Git 和 Github
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-03-06
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="git-命令-上传"><a href="#git-命令-上传" class="headerlink" title="git 命令(上传)"></a>git 命令(上传)</h1><h3 id="把网上仓库上传到本地，并对多个人写的内容的更新与自己写的同步"><a href="#把网上仓库上传到本地，并对多个人写的内容的更新与自己写的同步" class="headerlink" title="把网上仓库上传到本地，并对多个人写的内容的更新与自己写的同步"></a>把网上仓库上传到本地，并对多个人写的内容的更新与自己写的同步</h3><ul>
+<li>git clone 克隆网上仓库到本地</li>
+<li>git diff 未添加到git缓存区之前详细修改<br>查看做了哪些修改。按 q 退出。</li>
+<li>git add &lt;文件名&gt; 把项目的修改添加到缓存区</li>
+<li>git commit -m ‘名字’ 更新版本</li>
+<li>git push 上传网上</li>
+<li>git pull 多个系统同时更新，先把网上修改的放到本地</li>
+<li>git log 查看当前版本信息</li>
+<li>git log –pretty=oneline 显示1行</li>
+<li>git reset –hard [版本号] 回退到该版本</li>
+</ul>
+<h3 id="把本地建的文件夹上传到网上"><a href="#把本地建的文件夹上传到网上" class="headerlink" title="把本地建的文件夹上传到网上"></a>把本地建的文件夹上传到网上</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.先在网上创建仓库</span><br><span class="line">2.git init(将本地的文件夹变成仓库)</span><br><span class="line">3.git add README.md</span><br><span class="line">4.git commit -m &quot;first commit&quot;</span><br><span class="line">5.git remote add origin git@github.com:beginner-g/a.git</span><br><span class="line">6.git push -u origin master</span><br></pre></td></tr></table></figure>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年03月09日 16:07</p>
+        <p>原始链接： <a class="post-url" href="/2018/03/06/Git和Github/" title="Git 和 Github">http://beginner-g.github.io/2018/03/06/Git和Github/</a></p>
+        <footer>
+            <a href="http://beginner-g.github.io">
+                <img src="/images/logo.png" alt="guoshuai">
+                guoshuai
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://beginner-g.github.io/2018/03/06/Git和Github/&title=《Git 和 Github》 — Beginner&pic=https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1945343878,3655021699&fm=58" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://beginner-g.github.io/2018/03/06/Git和Github/&title=《Git 和 Github》 — Beginner&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://beginner-g.github.io/2018/03/06/Git和Github/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Git 和 Github》 — Beginner&url=http://beginner-g.github.io/2018/03/06/Git和Github/&via=http://beginner-g.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://beginner-g.github.io/2018/03/06/Git和Github/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://beginner-g.github.io/2018/03/06/Git和Github/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/git/" class="color4">git</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#git-命令-上传"><span class="post-toc-text">git 命令(上传)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#把网上仓库上传到本地，并对多个人写的内容的更新与自己写的同步"><span class="post-toc-text">把网上仓库上传到本地，并对多个人写的内容的更新与自己写的同步</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#把本地建的文件夹上传到网上"><span class="post-toc-text">把本地建的文件夹上传到网上</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2018/03/07/vue-cli/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          安装 Vue 脚手架时遇到的问题
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/03/06/React/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">React 是什么</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 guoshuai<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://beginner-g.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Others/">Others</a><a class="category-link" href="/categories/Vue/">Vue</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JSX/" style="font-size: 10px;">JSX</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/component/" style="font-size: 10px;">component</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/组件拆分/" style="font-size: 10px;">组件拆分</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JSX/" style="font-size: 10px;">JSX</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/component/" style="font-size: 10px;">component</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/组件拆分/" style="font-size: 10px;">组件拆分</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

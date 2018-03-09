@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>React 是什么 | Beginner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Guoshuai's Blog" />
+  
+  <meta name="description" content="官网在 https://github.com/facebookincubator/create-react-app 。 简称 cra 。cra 的主要作者就是目前 react 项目的老大 Dan ，以及 facebook 公司的其他一些员工。 cra 是一个开发 React 项目的环境，无需配置直接使用。 开发 React 项目曾经很麻烦没有 cra 之前，开发 React 需要自己搭建下面的环境">
+<meta name="keywords" content="react,Webpack,Babel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React 是什么">
+<meta property="og:url" content="http://beginner-g.github.io/2018/03/06/React/index.html">
+<meta property="og:site_name" content="Beginner">
+<meta property="og:description" content="官网在 https://github.com/facebookincubator/create-react-app 。 简称 cra 。cra 的主要作者就是目前 react 项目的老大 Dan ，以及 facebook 公司的其他一些员工。 cra 是一个开发 React 项目的环境，无需配置直接使用。 开发 React 项目曾经很麻烦没有 cra 之前，开发 React 需要自己搭建下面的环境">
+<meta property="og:updated_time" content="2018-03-09T08:07:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React 是什么">
+<meta name="twitter:description" content="官网在 https://github.com/facebookincubator/create-react-app 。 简称 cra 。cra 的主要作者就是目前 react 项目的老大 Dan ，以及 facebook 公司的其他一些员工。 cra 是一个开发 React 项目的环境，无需配置直接使用。 开发 React 项目曾经很麻烦没有 cra 之前，开发 React 需要自己搭建下面的环境">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Guoshuai&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Guoshuai&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 WEB 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home"  href="/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/beginner-g">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-React" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      React 是什么
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Others/">Others</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-03-06
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p>官网在 <a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="noopener">https://github.com/facebookincubator/create-react-app</a> 。</p>
+<p>简称 cra 。cra 的主要作者就是目前 react 项目的老大 Dan ，以及 facebook 公司的其他一些员工。</p>
+<p>cra 是一个开发 React 项目的环境，无需配置直接使用。</p>
+<h3 id="开发-React-项目曾经很麻烦"><a href="#开发-React-项目曾经很麻烦" class="headerlink" title="开发 React 项目曾经很麻烦"></a>开发 React 项目曾经很麻烦</h3><p>没有 cra 之前，开发 React 需要自己搭建下面的环境：</p>
+<ul>
+<li>需要配置 Webpack ，来把多个 JS 源文件打包成一个文件</li>
+<li>需要配置 Babel，来编译 ES6</li>
+<li>需要配置 Babel，来编译 JSX</li>
+<li>另外还有很多 webpack 配置要来自己做，以便能够处理 svg/css/html 等各种文件类型</li>
+</ul>
+<p>总是是非常麻烦。而 cra 就包含 Webpack+Babel ，而且其中的配置都是顶级高手帮我们精心配置好的。</p>
+<h3 id="有了-cra-，我们开发就省心了"><a href="#有了-cra-，我们开发就省心了" class="headerlink" title="有了 cra ，我们开发就省心了"></a>有了 cra ，我们开发就省心了</h3><p>基本上就是，运行下面的命令来创建一个新的 React 项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create-react-app react-demo</span><br></pre></td></tr></table></figure></p>
+<p>生成的脚手架项目，也就是 react-demo ，它首先是一个 nodejs 项目，而且其中 package.json 和 node_modules 中已经为我们安装好了，开发 React 的常用的包。另外就是还有一个很小的 react 的程序，我们可以在上面继续开发了。</p>
+<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><p>用本来的国外镜像，有时候会创建失败，这时候就先运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure></p>
+<h3 id="文件介绍"><a href="#文件介绍" class="headerlink" title="文件介绍"></a>文件介绍</h3><p>生成的代码中，会有</p>
+<ul>
+<li><p>yarn.lock，这个如果你的系统上装了 yarn 就会有，yarn 是跟 npm 类似的一个东西，也是用来装 npm 包的。</p>
+</li>
+<li><p>public 文件夹，放 html 和图标的</p>
+</li>
+<li><p>src 文件夹，所有 js 代码都放到这里</p>
+</li>
+</ul>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年03月09日 16:07</p>
+        <p>原始链接： <a class="post-url" href="/2018/03/06/React/" title="React 是什么">http://beginner-g.github.io/2018/03/06/React/</a></p>
+        <footer>
+            <a href="http://beginner-g.github.io">
+                <img src="/images/logo.png" alt="guoshuai">
+                guoshuai
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://beginner-g.github.io/2018/03/06/React/&title=《React 是什么》 — Beginner&pic=http://www.chuanke.com/upload/courseware/f/31/3312428/image/09c68fe797fa58d78a1de4f34e0ea40f.gif" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://beginner-g.github.io/2018/03/06/React/&title=《React 是什么》 — Beginner&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://beginner-g.github.io/2018/03/06/React/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React 是什么》 — Beginner&url=http://beginner-g.github.io/2018/03/06/React/&via=http://beginner-g.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://beginner-g.github.io/2018/03/06/React/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://beginner-g.github.io/2018/03/06/React/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/react/" class="color1">react</a>
+      
+    <a href="/tags/Webpack/" class="color3">Webpack</a>
+      
+    <a href="/tags/Babel/" class="color1">Babel</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开发-React-项目曾经很麻烦"><span class="post-toc-text">开发 React 项目曾经很麻烦</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有了-cra-，我们开发就省心了"><span class="post-toc-text">有了 cra ，我们开发就省心了</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用淘宝镜像"><span class="post-toc-text">使用淘宝镜像</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件介绍"><span class="post-toc-text">文件介绍</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2018/03/06/Git和Github/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          Git 和 Github
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/03/06/Hello-react/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">创建 Hello react 项目</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 guoshuai<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://beginner-g.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Others/">Others</a><a class="category-link" href="/categories/Vue/">Vue</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JSX/" style="font-size: 10px;">JSX</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/component/" style="font-size: 10px;">component</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/组件拆分/" style="font-size: 10px;">组件拆分</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JSX/" style="font-size: 10px;">JSX</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/component/" style="font-size: 10px;">component</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/组件拆分/" style="font-size: 10px;">组件拆分</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
