@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>创建 Hello react 项目 | Beginner</title>
+  <title>React 中的 children 是什么 | Beginner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Guoshuai's Blog" />
   
-  <meta name="description" content="在 create-react-app 环境下，我们来写一个 react 的 Hello World 。 运行项目到 create-react-app 帮我们生成的项目中，运行1npm start 就可以启动这个项目了。 一个 Hello World一个最简单的 React 项目，包含下面几个文件 src/App.js12345678910111213import React, &amp;#123; Com">
-<meta name="keywords" content="react">
+  <meta name="description" content="React 中的 children 是什么？子组件向父组件获取属性值的一种形式 向 React 组件内传数据，不仅仅有 props 这一种形式，还可以使用 children 。 Children 的传入方式1&amp;lt;Button&amp;gt;登录&amp;lt;/Button&amp;gt; 组件内获取Button.js 中这样写1this.props.children 就可以取到“登录”这个字符串了。">
+<meta name="keywords" content="react,children">
 <meta property="og:type" content="article">
-<meta property="og:title" content="创建 Hello react 项目">
-<meta property="og:url" content="http://beginner-g.github.io/2017/11/06/Hello-react/index.html">
+<meta property="og:title" content="React 中的 children 是什么">
+<meta property="og:url" content="http://beginner-g.github.io/2017/09/11/React-children/index.html">
 <meta property="og:site_name" content="Beginner">
-<meta property="og:description" content="在 create-react-app 环境下，我们来写一个 react 的 Hello World 。 运行项目到 create-react-app 帮我们生成的项目中，运行1npm start 就可以启动这个项目了。 一个 Hello World一个最简单的 React 项目，包含下面几个文件 src/App.js12345678910111213import React, &amp;#123; Com">
-<meta property="og:updated_time" content="2018-03-12T05:47:52.000Z">
+<meta property="og:description" content="React 中的 children 是什么？子组件向父组件获取属性值的一种形式 向 React 组件内传数据，不仅仅有 props 这一种形式，还可以使用 children 。 Children 的传入方式1&amp;lt;Button&amp;gt;登录&amp;lt;/Button&amp;gt; 组件内获取Button.js 中这样写1this.props.children 就可以取到“登录”这个字符串了。">
+<meta property="og:updated_time" content="2018-03-12T07:23:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="创建 Hello react 项目">
-<meta name="twitter:description" content="在 create-react-app 环境下，我们来写一个 react 的 Hello World 。 运行项目到 create-react-app 帮我们生成的项目中，运行1npm start 就可以启动这个项目了。 一个 Hello World一个最简单的 React 项目，包含下面几个文件 src/App.js12345678910111213import React, &amp;#123; Com">
+<meta name="twitter:title" content="React 中的 children 是什么">
+<meta name="twitter:description" content="React 中的 children 是什么？子组件向父组件获取属性值的一种形式 向 React 组件内传数据，不仅仅有 props 这一种形式，还可以使用 children 。 Children 的传入方式1&amp;lt;Button&amp;gt;登录&amp;lt;/Button&amp;gt; 组件内获取Button.js 中这样写1this.props.children 就可以取到“登录”这个字符串了。">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -106,14 +106,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-Hello-react" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-React-children" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      创建 Hello react 项目
+      React 中的 children 是什么
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -126,7 +126,7 @@
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2017-11-06
+          <i class="fa fa-calendar"></i>  2017-09-11
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -142,21 +142,16 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>在 create-react-app 环境下，我们来写一个 react 的 Hello World 。</p>
-<h3 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h3><p>到 create-react-app 帮我们生成的项目中，运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure></p>
-<p>就可以启动这个项目了。</p>
-<h3 id="一个-Hello-World"><a href="#一个-Hello-World" class="headerlink" title="一个 Hello World"></a>一个 Hello World</h3><p>一个最简单的 React 项目，包含下面几个文件</p>
-<p>src/App.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        Hello World</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default App</span></span><br></pre></td></tr></table></figure></p>
-<p>src/index.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;App /&gt;, document.getElementById('root'))</span><br></pre></td></tr></table></figure></p>
-<p>public/index.html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"root"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="介绍一下上面三个文件的作用"><a href="#介绍一下上面三个文件的作用" class="headerlink" title="介绍一下上面三个文件的作用"></a>介绍一下上面三个文件的作用</h3><p>index.html 文件中基本就是空的，关键就是保留一个 div ，目的是用来挂载 React 组件。</p>
-<p>App.js 文件是一个 React 组件 （ component ）。未来会成为整个程序的主体。</p>
-<p>index.js 中主要是使用 ReactDom 这个包，作用就是把 App.js 中的 react 组件，挂到 index.html 中的那个唯一的 div 之上。</p>
+            <h3 id="React-中的-children-是什么？"><a href="#React-中的-children-是什么？" class="headerlink" title="React 中的 children 是什么？"></a>React 中的 children 是什么？</h3><p>子组件向父组件获取属性值的一种形式</p>
+<p>向 React 组件内传数据，不仅仅有 props 这一种形式，还可以使用 children 。</p>
+<h3 id="Children-的传入方式"><a href="#Children-的传入方式" class="headerlink" title="Children 的传入方式"></a>Children 的传入方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button&gt;登录&lt;/Button&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="组件内获取"><a href="#组件内获取" class="headerlink" title="组件内获取"></a>组件内获取</h3><p>Button.js 中这样写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.props.children</span><br></pre></td></tr></table></figure></p>
+<p>就可以取到“登录”这个字符串了。</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年03月12日 13:47</p>
-        <p>原始链接： <a class="post-url" href="/2017/11/06/Hello-react/" title="创建 Hello react 项目">http://beginner-g.github.io/2017/11/06/Hello-react/</a></p>
+        <p>最后更新： 2018年03月12日 15:23</p>
+        <p>原始链接： <a class="post-url" href="/2017/09/11/React-children/" title="React 中的 children 是什么">http://beginner-g.github.io/2017/09/11/React-children/</a></p>
         <footer>
             <a href="http://beginner-g.github.io">
                 <img src="/images/logo.jpeg" alt="guoshuai">
@@ -213,7 +208,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://beginner-g.github.io/2017/11/06/Hello-react/&title=《创建 Hello react 项目》 — Beginner&pic=https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=384169016,987997010&fm=27&gp=0.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://beginner-g.github.io/2017/09/11/React-children/&title=《React 中的 children 是什么》 — Beginner&pic=https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2436513331,2729964507&fm=27&gp=0.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -223,22 +218,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://beginner-g.github.io/2017/11/06/Hello-react/&title=《创建 Hello react 项目》 — Beginner&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://beginner-g.github.io/2017/09/11/React-children/&title=《React 中的 children 是什么》 — Beginner&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://beginner-g.github.io/2017/11/06/Hello-react/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://beginner-g.github.io/2017/09/11/React-children/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《创建 Hello react 项目》 — Beginner&url=http://beginner-g.github.io/2017/11/06/Hello-react/&via=http://beginner-g.github.io" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React 中的 children 是什么》 — Beginner&url=http://beginner-g.github.io/2017/09/11/React-children/&via=http://beginner-g.github.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://beginner-g.github.io/2017/11/06/Hello-react/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://beginner-g.github.io/2017/09/11/React-children/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -248,7 +243,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://beginner-g.github.io/2017/11/06/Hello-react/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://beginner-g.github.io/2017/09/11/React-children/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -262,6 +257,8 @@
       
     <a href="/tags/react/" class="color1">react</a>
       
+    <a href="/tags/children/" class="color4">children</a>
+      
   </li>
 
         </ul>
@@ -273,26 +270,26 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运行项目"><span class="post-toc-text">运行项目</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个-Hello-World"><span class="post-toc-text">一个 Hello World</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍一下上面三个文件的作用"><span class="post-toc-text">介绍一下上面三个文件的作用</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中的-children-是什么？"><span class="post-toc-text">React 中的 children 是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Children-的传入方式"><span class="post-toc-text">Children 的传入方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组件内获取"><span class="post-toc-text">组件内获取</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2017/12/26/React/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/09/12/React-jsx/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          React 是什么
+          组件中的 JSX 语法怎么用
         
       </span>
     </a>
   
   
-    <a href="/2017/10/29/React-component/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">React 组件是什么</span>
+    <a href="/2017/09/06/Git和Github/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Git 和 Github</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
