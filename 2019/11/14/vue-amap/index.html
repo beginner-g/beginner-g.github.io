@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vue中引用高德地图amap | Beginner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Guoshuai's Blog" />
+  
+  <meta name="description" content="vue中引用高德地图amap具体流程引入 高德，web-sdk 安装 vue-amap 1npm install vue-amap  在html中引入在官网申请密钥: https://lbs.amap.com 申请密钥 1&amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.8&amp;amp;key = 你自己">
+<meta name="keywords" content="vue,vue-amap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue中引用高德地图amap">
+<meta property="og:url" content="http://beginner-g.github.io/2019/11/14/vue-amap/index.html">
+<meta property="og:site_name" content="Beginner">
+<meta property="og:description" content="vue中引用高德地图amap具体流程引入 高德，web-sdk 安装 vue-amap 1npm install vue-amap  在html中引入在官网申请密钥: https://lbs.amap.com 申请密钥 1&amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.8&amp;amp;key = 你自己">
+<meta property="og:updated_time" content="2019-11-14T02:19:57.560Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue中引用高德地图amap">
+<meta name="twitter:description" content="vue中引用高德地图amap具体流程引入 高德，web-sdk 安装 vue-amap 1npm install vue-amap  在html中引入在官网申请密钥: https://lbs.amap.com 申请密钥 1&amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.8&amp;amp;key = 你自己">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Guoshuai&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于我</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpeg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Guoshuai&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 WEB 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home"  href="/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/beginner-g">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="https://twitter.com/guoshuai0526">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-vue-amap" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      vue中引用高德地图amap
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Vue/">Vue</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-11-14
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="vue中引用高德地图amap具体流程"><a href="#vue中引用高德地图amap具体流程" class="headerlink" title="vue中引用高德地图amap具体流程"></a>vue中引用高德地图amap具体流程</h3><h4 id="引入-高德，web-sdk"><a href="#引入-高德，web-sdk" class="headerlink" title="引入 高德，web-sdk"></a>引入 高德，web-sdk</h4><ul>
+<li><p>安装 vue-amap</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-amap</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在html中引入<br>在官网申请密钥: <a href="https://lbs.amap.com" target="_blank" rel="noopener">https://lbs.amap.com</a> 申请密钥</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"https://webapi.amap.com/maps?v=1.4.8&amp;key = 你自己的Key"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>或者<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="comment">// 初始化地图</span></span><br><span class="line">	<span class="built_in">window</span>.VueAMap.initAMapApiLoader(&#123;</span><br><span class="line">		key: <span class="string">'你自己的Key'</span>,</span><br><span class="line">		plugin: [</span><br><span class="line">			<span class="string">'AMap.Autocomplete'</span>,</span><br><span class="line">			<span class="string">'AMap.PlaceSearch'</span>,</span><br><span class="line">			<span class="string">'AMap.Scale'</span>,</span><br><span class="line">			<span class="string">'AMap.OverView'</span>,</span><br><span class="line">			<span class="string">'AMap.ToolBar'</span>,</span><br><span class="line">			<span class="string">'AMap.MapType'</span>,</span><br><span class="line">			<span class="string">'AMap.PolyEditor'</span>,</span><br><span class="line">			<span class="string">'AMap.CircleEditor'</span>,</span><br><span class="line">			<span class="string">'AMap.Geolocation'</span>,</span><br><span class="line">			<span class="string">'AMap.ElasticMarker'</span>,</span><br><span class="line">			...</span><br><span class="line">		],</span><br><span class="line">		uiVersion: <span class="string">'1.0'</span>,</span><br><span class="line">		v: <span class="string">'1.4.4'</span>,</span><br><span class="line">	&#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="单纯获取当前位置信息"><a href="#单纯获取当前位置信息" class="headerlink" title="单纯获取当前位置信息"></a>单纯获取当前位置信息</h4><ul>
+<li>获取经纬度<br>  用的TypeScript写法，不懂的可以去<a href="http://www.typescriptlang.org/docs/home.html" target="_blank" rel="noopener">TypeScript</a>官网查询下<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">private getMap() &#123;</span><br><span class="line">	<span class="keyword">let</span> map: any;</span><br><span class="line">	<span class="keyword">let</span> geolocation: any;</span><br><span class="line">	<span class="keyword">const</span> self = <span class="keyword">this</span>;</span><br><span class="line">	map = <span class="keyword">new</span> AMap.Map(<span class="string">'container'</span>, &#123;</span><br><span class="line">		resizeEnable: <span class="literal">true</span>,</span><br><span class="line">	&#125;);</span><br><span class="line">	map.plugin(<span class="string">'AMap.Geolocation'</span>, (o: any) =&gt; &#123;</span><br><span class="line">		geolocation = <span class="keyword">new</span> AMap.Geolocation(&#123;</span><br><span class="line">　　　　enableHighAccuracy: <span class="literal">true</span>, <span class="comment">// 是否使用高精度定位，默认:true</span></span><br><span class="line">　　　　timeout: <span class="number">20000</span>, <span class="comment">// 超过10秒后停止定位，默认：无穷大</span></span><br><span class="line">　　　　buttonPosition: <span class="string">'RB'</span>,</span><br><span class="line">		&#125;);</span><br><span class="line">		geolocation.getCurrentPosition();</span><br><span class="line">		<span class="comment">// tslint:disable-next-line:no-unused-expression</span></span><br><span class="line">		<span class="keyword">new</span> AMap.event.addListener(geolocation, <span class="string">'complete'</span>, <span class="function"><span class="keyword">function</span> <span class="title">onComplete</span>(<span class="params">data: any</span>) </span>&#123;</span><br><span class="line">			<span class="keyword">const</span> getLongitude = data.position.getLng();</span><br><span class="line">			<span class="keyword">const</span> getLatitude = data.position.getLat();</span><br><span class="line">			self.latitude = getLongitude;</span><br><span class="line">			self.longitude = getLatitude;</span><br><span class="line">			<span class="comment">// self.getData();</span></span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>最后在你需要用到的地方去调this.getMap()</p>
+<h4 id="显示地图"><a href="#显示地图" class="headerlink" title="显示地图"></a>显示地图</h4><ul>
+<li><p>引入地图标签</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-amap</span> <span class="attr">:zoom</span>=<span class="string">'zoom'</span> <span class="attr">:center</span>=<span class="string">'center'</span> <span class="attr">:plugin</span>=<span class="string">"plugin"</span> <span class="attr">:events</span>=<span class="string">"events"</span>  <span class="attr">class</span>=<span class="string">"amap-demo"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">el-amap-marker</span></span></span><br><span class="line"><span class="tag">		<span class="attr">v-for</span>=<span class="string">"(marker, index) in markers"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">:position</span>=<span class="string">"marker.position"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">:events</span>=<span class="string">"marker.events"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">:visible</span>=<span class="string">"marker.visible"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">:draggable</span>=<span class="string">"marker.draggable"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">:key</span>=<span class="string">"index"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">:clickable</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">vid</span>=<span class="string">"marker"</span></span></span><br><span class="line"><span class="tag">	/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-amap</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义变量</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">private lng: any = <span class="number">0</span>;</span><br><span class="line">private lat: any = <span class="number">0</span>;</span><br><span class="line">private center: any = []; <span class="comment">// 地图中心点</span></span><br><span class="line">private loaded: boolean = <span class="literal">true</span>;</span><br><span class="line">private zoom: any = <span class="string">'13'</span>; <span class="comment">// 地图放大限制</span></span><br><span class="line">private markers: any = [];</span><br><span class="line">private plugin: any = [];</span><br><span class="line">private events: any = &#123;&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置地图</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> self = <span class="keyword">this</span>;</span><br><span class="line">self.plugin = [</span><br><span class="line">	&#123;</span><br><span class="line">		enableHighAccuracy: <span class="literal">true</span>, <span class="comment">//是否使用高精度定位，默认:true</span></span><br><span class="line">		timeout: <span class="number">100</span>, <span class="comment">//超过10秒后停止定位，默认：无穷大</span></span><br><span class="line">		maximumAge: <span class="number">0</span>, <span class="comment">//定位结果缓存0毫秒，默认：0</span></span><br><span class="line">		convert: <span class="literal">true</span>, <span class="comment">//自动偏移坐标，偏移后的坐标为高德坐标，默认：true</span></span><br><span class="line">		showButton: <span class="literal">true</span>, <span class="comment">//显示定位按钮，默认：true</span></span><br><span class="line">		buttonPosition: <span class="string">'RB'</span>, <span class="comment">//定位按钮停靠位置，默认：'LB'，左下角</span></span><br><span class="line">		showMarker: <span class="literal">true</span>, <span class="comment">//定位成功后在定位到的位置显示点标记，默认：true</span></span><br><span class="line">		showCircle: <span class="literal">true</span>, <span class="comment">//定位成功后用圆圈表示定位精度范围，默认：true</span></span><br><span class="line">		panToLocation: <span class="literal">true</span>, <span class="comment">//定位成功后将定位到的位置作为地图中心点，默认：true</span></span><br><span class="line">		zoomToAccuracy: <span class="literal">true</span>, <span class="comment">//定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false</span></span><br><span class="line">		extensions: <span class="string">'all'</span>,</span><br><span class="line">		pName: <span class="string">'Geolocation'</span>,</span><br><span class="line">		events: &#123;</span><br><span class="line">			init: <span class="function">(<span class="params">o: any</span>) =&gt;</span> &#123;</span><br><span class="line">				<span class="comment">// o 是高德地图定位插件实例</span></span><br><span class="line">				o.getCurrentPosition(<span class="function">(<span class="params">status: any, result: any</span>) =&gt;</span> &#123;</span><br><span class="line">					<span class="keyword">if</span> (result &amp;&amp; result.position) &#123;</span><br><span class="line">						self.center = [result.position.lng, result.position.lat];</span><br><span class="line">						self.loaded = <span class="literal">true</span>;</span><br><span class="line">						self.lng = result.position.lng;</span><br><span class="line">						self.lat = result.position.lat;</span><br><span class="line">						self.markers[<span class="number">0</span>].position = [self.lng, self.lat]; <span class="comment">// 标记默认在定位处</span></span><br><span class="line">					&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;,</span><br><span class="line">];</span><br><span class="line">self.events = &#123; <span class="comment">//选点</span></span><br><span class="line">	init: <span class="function">(<span class="params">o: any</span>) =&gt;</span> &#123;</span><br><span class="line">		self.lng = o.getCenter().lng;</span><br><span class="line">		self.lat = o.getCenter().lat;</span><br><span class="line">		o.getCity(<span class="function">(<span class="params">result: any</span>) =&gt;</span> &#123;&#125;);</span><br><span class="line">	&#125;,</span><br><span class="line">	click(e: any) &#123;</span><br><span class="line">		self.lng = e.lnglat.lng;</span><br><span class="line">		self.lat = e.lnglat.lat;</span><br><span class="line">		self.markers[<span class="number">0</span>].position = [self.lng, self.lat];</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;;</span><br><span class="line">self.markers = [ <span class="comment">// 标记点</span></span><br><span class="line">	&#123;</span><br><span class="line">		position: self.center,</span><br><span class="line">		anchor: <span class="string">'center'</span>,</span><br><span class="line">		events: &#123;</span><br><span class="line">			<span class="comment">// 点击触发</span></span><br><span class="line">			click: <span class="function">(<span class="params">e: any</span>) =&gt;</span> &#123;</span><br><span class="line">				self.lng = e.lnglat.lng;</span><br><span class="line">				self.lat = e.lnglat.lat;</span><br><span class="line">				self.loaded = <span class="literal">true</span>;</span><br><span class="line">			&#125;,</span><br><span class="line">			<span class="comment">// 移动触发</span></span><br><span class="line">			dragend: <span class="function">(<span class="params">e: any</span>) =&gt;</span> &#123;</span><br><span class="line">				self.markers[<span class="number">0</span>].position = [e.lnglat.lng, e.lnglat.lat];</span><br><span class="line">				self.lng = e.lnglat.lng;</span><br><span class="line">				self.lat = e.lnglat.lat;</span><br><span class="line">			&#125;,</span><br><span class="line">		&#125;,</span><br><span class="line">		visible: <span class="literal">true</span>,</span><br><span class="line">		draggable: <span class="literal">true</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年11月14日 10:19</p>
+        <p>原始链接： <a class="post-url" href="/2019/11/14/vue-amap/" title="vue中引用高德地图amap">http://beginner-g.github.io/2019/11/14/vue-amap/</a></p>
+        <footer>
+            <a href="http://beginner-g.github.io">
+                <img src="/images/logo.jpeg" alt="guoshuai">
+                guoshuai
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢打赏呦，我会不断地更新小知识的哦😄
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://beginner-g.github.io/2019/11/14/vue-amap/&title=《vue中引用高德地图amap》 — Beginner&pic=http://img1.imgtn.bdimg.com/it/u=80834248,2473924617&fm=27&gp=0.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://beginner-g.github.io/2019/11/14/vue-amap/&title=《vue中引用高德地图amap》 — Beginner&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://beginner-g.github.io/2019/11/14/vue-amap/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue中引用高德地图amap》 — Beginner&url=http://beginner-g.github.io/2019/11/14/vue-amap/&via=http://beginner-g.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://beginner-g.github.io/2019/11/14/vue-amap/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://beginner-g.github.io/2019/11/14/vue-amap/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/vue/" class="color4">vue</a>
+      
+    <a href="/tags/vue-amap/" class="color4">vue-amap</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue中引用高德地图amap具体流程"><span class="post-toc-text">vue中引用高德地图amap具体流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#引入-高德，web-sdk"><span class="post-toc-text">引入 高德，web-sdk</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#单纯获取当前位置信息"><span class="post-toc-text">单纯获取当前位置信息</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#显示地图"><span class="post-toc-text">显示地图</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/13/web数据存储/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">web数据存储方式对比</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 guoshuai<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://beginner-g.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Html5/">Html5</a><a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Others/">Others</a><a class="category-link" href="/categories/React/">React</a><a class="category-link" href="/categories/ReactNative/">ReactNative</a><a class="category-link" href="/categories/Vue/">Vue</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JSX/" style="font-size: 10px;">JSX</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/children/" style="font-size: 10px;">children</a> <a href="/tags/component/" style="font-size: 10px;">component</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/rn-ios/" style="font-size: 10px;">rn-ios</a> <a href="/tags/vue/" style="font-size: 15px;">vue</a> <a href="/tags/vue-amap/" style="font-size: 10px;">vue-amap</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/web数据存储方式/" style="font-size: 10px;">web数据存储方式</a> <a href="/tags/组件拆分/" style="font-size: 10px;">组件拆分</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于我</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Babel/" style="font-size: 10px;">Babel</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JSX/" style="font-size: 10px;">JSX</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/children/" style="font-size: 10px;">children</a> <a href="/tags/component/" style="font-size: 10px;">component</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/rn-ios/" style="font-size: 10px;">rn-ios</a> <a href="/tags/vue/" style="font-size: 15px;">vue</a> <a href="/tags/vue-amap/" style="font-size: 10px;">vue-amap</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/web数据存储方式/" style="font-size: 10px;">web数据存储方式</a> <a href="/tags/组件拆分/" style="font-size: 10px;">组件拆分</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
